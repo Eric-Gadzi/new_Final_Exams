@@ -1,6 +1,9 @@
 
 <?php
+require 'Database_connection.php';
+
   function ticketRow($row_number, $ticket_id, $ticket_name, $ticket_price, $ticket_type, $date, $number_of_tickets, $event_name, $event_id){
+    require 'Database_connection.php';
     echo "
 
            <tr>
@@ -39,7 +42,7 @@
   }
 
   function ticketsBought($ticket_id){
-    require('..\Database_connection.php');
+    require 'Database_connection.php';
     $sql = " 
       SELECT payment.ticket_id 
       FROM payment
@@ -55,8 +58,7 @@
   
 
   function displayTickets($sql){
-    require('..\Database_connection.php');
-    
+    require 'Database_connection.php';   
 
     $result = $conn->query($sql);
     if($result->num_rows > 0){
@@ -80,7 +82,7 @@
       echo " 
         <script>
           alert('tickets not available');
-        window.location.href='Tickets.php';
+          window.location.href='Tickets.php';
 
         </script>
       ";
@@ -95,6 +97,8 @@
   
 
   function tableHeads(){
+    require 'Database_connection.php';
+
     echo "
        <thead>
                 <tr>
@@ -216,7 +220,7 @@
             <tbody>
               
                   <?php 
-
+              require 'Database_connection.php';
                     if(isset($_GET['buy'])){
                       $event_id = $_GET['event_id'];
                       $stadium_id = $_GET['stadium_id'];
@@ -237,7 +241,7 @@
 
                   else  if(isset($_GET['my_ticket'])){
                       require "ticket template.php";
-
+                    
                       acceptedTicket('VGMA Awards', '31-12-2020', 'TO1', 'Vodafone Ghana', 'Accra Sports Stadium');
 
 
