@@ -1,4 +1,5 @@
 <?php
+  require 'Database_connection.php';
 
   function checkStatus($event_status){
     if($event_status === '0'){
@@ -18,7 +19,7 @@
   }
 
   function displayEven($row_number, $event_name, $event_date, $stadium_name, $town, $region, $organiser, $event_id, $stadium_id, $event_status){
-  
+    require "Database_connection.php";
     echo "
            <tbody>
 
@@ -76,7 +77,7 @@
 
 
     function mainDisplay($sql){ 
-      require '..\Database_connection.php';
+      require 'Database_connection.php';
 
     $select_event = $sql;
     $select_event_result = $conn->query($select_event);
@@ -216,6 +217,7 @@
               </thead>
               
               <?php
+                require 'Database_connection.php';
                 if(isset($_GET['view'])){
                   $stadium_id = $_GET['stadium_id'];
                   $sql_with_stadium_id = " 
