@@ -17,7 +17,7 @@
       <div class="row">
         <div class="col-sm-6 login-section-wrapper">
           <div class="brand-wrapper">
-            <img src="Assets\DashBoard\Coat_of_arms_of_Ghana.svg.png" alt="logo" class="logo">
+            <img src="Coat_of_arms_of_Ghana.svg.png" alt="logo" class="logo">
           </div>
           <div class="login-wrapper my-auto">
             <h1 class="login-title">Log in</h1>

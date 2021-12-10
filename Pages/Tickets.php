@@ -80,7 +80,7 @@
       echo " 
         <script>
           alert('tickets not available');
-        window.location.href='/Final Exams/Pages/Tickets.php';
+        window.location.href='Tickets.php';
 
         </script>
       ";

@@ -45,11 +45,11 @@
 					// // echo "the passwords matches";
 					echo "
 						<script>
-							window.open('/Final Exams/Pages/trials.html'); 
+							alert('login successful'); 
 						</script>
 
 					";
-				 header("Location: /Final Exams/Pages/trials.html") ;
+				 header("Location: ../trials.html") ;
 					 
 
 					$get_userinfo = "SELECT `Participant_id`, `First_name`, `Last_name`, `DOB`, `Gender`, `Nationality`, `Email`, `phone_number`, `address` FROM `participant` WHERE email = '$email'";

@@ -136,11 +136,11 @@
 							echo "
 								<script>
 									alert('Account created succcessfully!!');
-									window.open('../Login/Login/Login.php');
+									window.open('../Login/Login.php');
 								</script>
 							";
 
-								header('Location: ..\Login\Login\Login.php');
+								header('Location: ../Login/Login.php');
 							
 						}
 						else{
